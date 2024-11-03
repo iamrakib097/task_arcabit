@@ -13,113 +13,62 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      .card {
-        perspective: 1000px; 
-      }
-      .card-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        transition: transform 0.6s;
-        transform-style: preserve-3d; 
-      }
-      .card:hover .card-inner {
-        transform: rotateY(180deg); 
-      }
-      .card-front,
-      .card-back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden; 
-      }
-      .card-back {
-        background-color: #e31e24; 
-        transform: rotateY(180deg); 
-      }
-      .card-front {
-        background-color: #f9f9f9; 
-      }
-      .hover\:underline-effect {
-  position: relative;
-  display: inline-block; 
-}
-
-.hover\:underline-effect::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px; 
-  height: 2px;
-  background: white; 
-  width: 100%;
-  transform: scaleX(0); 
-  transform-origin: left; 
-  transition: transform 0.3s ease; 
-}
-
-.hover\:underline-effect:hover::after {
-  transform: scaleX(1); 
-}
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-}
-
-.flip-card {
-  perspective: 1000px;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-
-.flip-card-back {
-  transform: rotateY(180deg);
-}
-
+      
 
     </style>
   </head>
   <body>
-    <section class="max-w-[1349px] bg-[#151515] h-[102px] flex items-center">
-      <nav class="max-w-[1169px] h-[102px] flex justify-between items-center px-[90px] py-2 flex-1 font-montserrat">
+    <section id="navbar-section" class="max-w-[1349px] bg-[#151515] h-[102px] flex items-center transition-colors duration-300">
+      <nav class="max-w-[1169px] h-[102px] flex justify-between items-center px-[90px] py-2 flex-1 font-montserrat text-white">
+        
         <img class="w-[227px]" src="/images/logoflat_whiteC.png" alt="Logo" />
         <img class="w-[40px] h-[30px] lg:hidden" src="/images/hamburger.svg" alt="Menu" />
-        <ul class="flex text-sm gap-4 text-white items-center">
+    
+       
+        <ul class="flex text-sm gap-4 items-center">
+          
           <li class="flex items-center border-white border-2 rounded-full px-2 relative group">
             <p class="text-lg">Produkty</p>
             <img src="images/down_arrow.svg" alt="Down arrow" width="10" height="10" class="ml-2" />
+    
+           
             <span class="tooltip hidden absolute bg-gray-800 text-white text-xs rounded-md p-1 -bottom-8 left-1/2 transform -translate-x-1/2">Tooltip for Produkty</span>
+    
+            
+            <div class="absolute hidden group-hover:block bg-white text-black left-0 top-full pt-10 rounded-md shadow-md w-[250px]">
+              <ul class="p-2">
+                <li class="py-1 px-4 hover:text-red-500">Arcabit Home Security</li>
+                <li class="py-1 px-4 hover:text-red-500">Arcabit Internet Security</li>
+                <li class="py-1 px-4 hover:text-red-500">Arcabit Endpoint Security</li>
+                <li class="py-1 px-4 hover:text-red-500">Arcabit Small Office Security</li>
+                <li class="py-1 px-4 hover:text-red-500">Arcabit Bezpieczna Szkoła</li>
+                <li class="py-1 px-4 hover:text-red-500">Arcabit Server</li>
+                <li class="py-1 px-4 hover:text-red-500">Arcabit Android Antivirus</li>
+                <li class="py-1 px-4 hover:text-red-500">Wersje OEM</li>
+                <li class="py-1 px-4 hover:text-red-500">Arcabit Skaner Online</li>
+                <li class="py-1 px-4 hover:text-red-500">Specyfikacja Arcabit</li>
+                <li class="py-1 px-4 hover:text-red-500">Porównanie produktów</li>
+              </ul>
+            </div>
           </li>
+    
+         
           <li class="hover:underline-effect">Do pobrania</li>
           <li class="hover:underline-effect">Biznes</li>
           <li class="hover:underline-effect">Dom i mala firma</li>
           <li class="hover:underline-effect">Edukacja</li>
           <li class="hover:underline-effect">Urzedy</li>
+    
+          
           <li class="flex items-center relative group hover:underline-effect">
-            <p>Kontact</p>
-            <img src="images/down_arrow.svg" alt="" width="14" height="10" class="ml-2" />
-            <span class="tooltip hidden absolute bg-gray-800 text-white text-xs rounded-md p-1 -bottom-8 left-1/2 transform -translate-x-1/2">Tooltip for Kontact</span>
+            <p>Kontakt</p>
+            <img src="images/down_arrow.svg" alt="Down arrow" width="14" height="10" class="ml-2" />
+    
+          
+            <span class="tooltip hidden absolute bg-gray-800 text-white text-xs rounded-md p-1 -bottom-8 left-1/2 transform -translate-x-1/2">Tooltip for Kontakt</span>
           </li>
+    
+         
           <li class="hover:underline-effect">Sklep</li>
         </ul>
       </nav>
@@ -127,8 +76,8 @@
     
     
     
-    <section class="flex flex-col bg-[#151515]">
-      <div class="flex">
+    <section class="flex flex-col bg-[#151515] mt-[94px]">
+      <div class="flex pt-6">
         <div class="flex-1">
           <img
             class="w-[537px] h-[364px]"
@@ -263,373 +212,640 @@
       </h2>
       <div class="grid grid-cols-4 gap-2">
         <!-- Card 1 -->
-        <div class="card w-[274px] h-[600px]">
-          <div class="card-inner">
-            <div
-              class="card-front flex items-center justify-start rounded-lg px-10"
-            >
-              <div class="flex justify-start flex-col">
-                <img class="w-[70px]" src="images/file_lock.svg" alt="" />
-                <h2 class="text-xl font-semibold">Ochrona Plikow</h2>
+        <div class="cols ">
+          <div class="col ">
+            <div class="container">
+              <div class="front">
+                <div class="inner">
+                  <img
+                    src="images/file_lock.svg"
+                    alt=""
+                  />
+                  <p >Web design</p>
+                </div>
               </div>
-            </div>
-            <div class="card-back flex items-center justify-center rounded-lg">
-              <h2 class="text-sm text-white px-10">
-                W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
-                systemie pliki, zarówno te otwierane, modyfikowane i tworzone
-                przez użytkownika jak i te, przetwarzane przez aplikacje
-                pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
-                optymalne wykorzystanie zasobów systemowych i dostosowanie
-                obciążenia do potrzeb użytkownika.
-              </h2>
+              <div class="back">
+                <div class="inner">
+                  <p>
+                    W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
+                    systemie pliki, zarówno te otwierane, modyfikowane i tworzone
+                    przez użytkownika jak i te, przetwarzane przez aplikacje
+                    pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
+                    optymalne wykorzystanie zasobów systemowych i dostosowanie
+                    obciążenia do potrzeb użytkownika.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        
+        
+        
         <!-- Card 2 -->
-        <div class="card w-[274px] h-[600px]">
-          <div class="card-inner">
-            <div
-              class="card-front flex items-center justify-start rounded-lg px-10"
-            >
-              <div class="flex justify-start flex-col">
-                <img class="w-[70px]" src="images/file_lock.svg" alt="" />
-                <h2 class="text-xl font-semibold">Ochrona Plikow</h2>
+        <div class="cols ">
+          <div class="col ">
+            <div class="container">
+              <div class="front">
+                <div class="inner">
+                  <img
+                    src="images/file_lock.svg"
+                    alt=""
+                  />
+                  <p >Web design</p>
+                </div>
               </div>
-            </div>
-            <div class="card-back flex items-center justify-center rounded-lg">
-              <h2 class="text-sm text-white px-10">
-                W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
-                systemie pliki, zarówno te otwierane, modyfikowane i tworzone
-                przez użytkownika jak i te, przetwarzane przez aplikacje
-                pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
-                optymalne wykorzystanie zasobów systemowych i dostosowanie
-                obciążenia do potrzeb użytkownika.
-              </h2>
+              <div class="back">
+                <div class="inner">
+                  <p>
+                    W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
+                    systemie pliki, zarówno te otwierane, modyfikowane i tworzone
+                    przez użytkownika jak i te, przetwarzane przez aplikacje
+                    pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
+                    optymalne wykorzystanie zasobów systemowych i dostosowanie
+                    obciążenia do potrzeb użytkownika.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <!-- Card 3 -->
-        <div class="card w-[274px] h-[600px]">
-          <div class="card-inner">
-            <div
-              class="card-front flex items-center justify-start rounded-lg px-10"
-            >
-              <div class="flex justify-start flex-col">
-                <img class="w-[70px]" src="images/file_lock.svg" alt="" />
-                <h2 class="text-xl font-semibold">Ochrona Plikow</h2>
+        <div class="cols ">
+          <div class="col ">
+            <div class="container">
+              <div class="front">
+                <div class="inner">
+                  <img
+                    src="images/file_lock.svg"
+                    alt=""
+                  />
+                  <p >Web design</p>
+                </div>
               </div>
-            </div>
-            <div class="card-back flex items-center justify-center rounded-lg">
-              <h2 class="text-sm text-white px-10">
-                W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
-                systemie pliki, zarówno te otwierane, modyfikowane i tworzone
-                przez użytkownika jak i te, przetwarzane przez aplikacje
-                pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
-                optymalne wykorzystanie zasobów systemowych i dostosowanie
-                obciążenia do potrzeb użytkownika.
-              </h2>
+              <div class="back">
+                <div class="inner">
+                  <p>
+                    W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
+                    systemie pliki, zarówno te otwierane, modyfikowane i tworzone
+                    przez użytkownika jak i te, przetwarzane przez aplikacje
+                    pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
+                    optymalne wykorzystanie zasobów systemowych i dostosowanie
+                    obciążenia do potrzeb użytkownika.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <!-- Card 4 -->
-        <div class="card w-[274px] h-[600px]">
-          <div class="card-inner">
-            <div
-              class="card-front flex items-center justify-start rounded-lg px-10"
-            >
-              <div class="flex justify-start flex-col">
-                <img class="w-[70px]" src="images/file_lock.svg" alt="" />
-                <h2 class="text-xl font-semibold">Ochrona Plikow</h2>
+        <div class="cols ">
+          <div class="col ">
+            <div class="container">
+              <div class="front">
+                <div class="inner">
+                  <img
+                    src="images/file_lock.svg"
+                    alt=""
+                  />
+                  <p >Web design</p>
+                </div>
               </div>
-            </div>
-            <div class="card-back flex items-center justify-center rounded-lg">
-              <h2 class="text-sm text-white px-10">
-                W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
-                systemie pliki, zarówno te otwierane, modyfikowane i tworzone
-                przez użytkownika jak i te, przetwarzane przez aplikacje
-                pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
-                optymalne wykorzystanie zasobów systemowych i dostosowanie
-                obciążenia do potrzeb użytkownika.
-              </h2>
+              <div class="back">
+                <div class="inner">
+                  <p>
+                    W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
+                    systemie pliki, zarówno te otwierane, modyfikowane i tworzone
+                    przez użytkownika jak i te, przetwarzane przez aplikacje
+                    pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
+                    optymalne wykorzystanie zasobów systemowych i dostosowanie
+                    obciążenia do potrzeb użytkownika.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <!-- Card 5 -->
-        <div class="card w-[274px] h-[600px]">
-          <div class="card-inner">
-            <div
-              class="card-front flex items-center justify-start rounded-lg px-10"
-            >
-              <div class="flex justify-start flex-col">
-                <img class="w-[70px]" src="images/file_lock.svg" alt="" />
-                <h2 class="text-xl font-semibold">Ochrona Plikow</h2>
+        <div class="cols ">
+          <div class="col ">
+            <div class="container">
+              <div class="front">
+                <div class="inner">
+                  <img
+                    src="images/file_lock.svg"
+                    alt=""
+                  />
+                  <p >Web design</p>
+                </div>
               </div>
-            </div>
-            <div class="card-back flex items-center justify-center rounded-lg">
-              <h2 class="text-sm text-white px-10">
-                W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
-                systemie pliki, zarówno te otwierane, modyfikowane i tworzone
-                przez użytkownika jak i te, przetwarzane przez aplikacje
-                pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
-                optymalne wykorzystanie zasobów systemowych i dostosowanie
-                obciążenia do potrzeb użytkownika.
-              </h2>
+              <div class="back">
+                <div class="inner">
+                  <p>
+                    W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
+                    systemie pliki, zarówno te otwierane, modyfikowane i tworzone
+                    przez użytkownika jak i te, przetwarzane przez aplikacje
+                    pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
+                    optymalne wykorzystanie zasobów systemowych i dostosowanie
+                    obciążenia do potrzeb użytkownika.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <!-- Card 6 -->
-        <div class="card w-[274px] h-[600px]">
-          <div class="card-inner">
-            <div
-              class="card-front flex items-center justify-start rounded-lg px-10"
-            >
-              <div class="flex justify-start flex-col">
-                <img class="w-[70px]" src="images/file_lock.svg" alt="" />
-                <h2 class="text-xl font-semibold">Ochrona Plikow</h2>
+        <div class="cols ">
+          <div class="col ">
+            <div class="container">
+              <div class="front">
+                <div class="inner">
+                  <img
+                    src="images/file_lock.svg"
+                    alt=""
+                  />
+                  <p >Web design</p>
+                </div>
               </div>
-            </div>
-            <div class="card-back flex items-center justify-center rounded-lg">
-              <h2 class="text-sm text-white px-10">
-                W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
-                systemie pliki, zarówno te otwierane, modyfikowane i tworzone
-                przez użytkownika jak i te, przetwarzane przez aplikacje
-                pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
-                optymalne wykorzystanie zasobów systemowych i dostosowanie
-                obciążenia do potrzeb użytkownika.
-              </h2>
+              <div class="back">
+                <div class="inner">
+                  <p>
+                    W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
+                    systemie pliki, zarówno te otwierane, modyfikowane i tworzone
+                    przez użytkownika jak i te, przetwarzane przez aplikacje
+                    pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
+                    optymalne wykorzystanie zasobów systemowych i dostosowanie
+                    obciążenia do potrzeb użytkownika.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <!-- Card 7 -->
-        <div class="card w-[274px] h-[600px]">
-          <div class="card-inner">
-            <div
-              class="card-front flex items-center justify-start rounded-lg px-10"
-            >
-              <div class="flex justify-start flex-col">
-                <img class="w-[70px]" src="images/file_lock.svg" alt="" />
-                <h2 class="text-xl font-semibold">Ochrona Plikow</h2>
+        <div class="cols ">
+          <div class="col ">
+            <div class="container">
+              <div class="front">
+                <div class="inner">
+                  <img
+                    src="images/file_lock.svg"
+                    alt=""
+                  />
+                  <p >Web design</p>
+                </div>
               </div>
-            </div>
-            <div class="card-back flex items-center justify-center rounded-lg">
-              <h2 class="text-sm text-white px-10">
-                W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
-                systemie pliki, zarówno te otwierane, modyfikowane i tworzone
-                przez użytkownika jak i te, przetwarzane przez aplikacje
-                pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
-                optymalne wykorzystanie zasobów systemowych i dostosowanie
-                obciążenia do potrzeb użytkownika.
-              </h2>
+              <div class="back">
+                <div class="inner">
+                  <p>
+                    W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
+                    systemie pliki, zarówno te otwierane, modyfikowane i tworzone
+                    przez użytkownika jak i te, przetwarzane przez aplikacje
+                    pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
+                    optymalne wykorzystanie zasobów systemowych i dostosowanie
+                    obciążenia do potrzeb użytkownika.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <!-- Card 8 -->
-        <div class="card w-[274px] h-[600px]">
-          <div class="card-inner">
-            <div
-              class="card-front flex items-center justify-start rounded-lg px-10"
-            >
-              <div class="flex justify-start flex-col">
-                <img class="w-[70px]" src="images/file_lock.svg" alt="" />
-                <h2 class="text-xl font-semibold">Ochrona Plikow</h2>
+        <div class="cols ">
+          <div class="col ">
+            <div class="container">
+              <div class="front">
+                <div class="inner">
+                  <img
+                    src="images/file_lock.svg"
+                    alt=""
+                  />
+                  <p >Web design</p>
+                </div>
               </div>
-            </div>
-            <div class="card-back flex items-center justify-center rounded-lg">
-              <h2 class="text-sm text-white px-10">
-                W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
-                systemie pliki, zarówno te otwierane, modyfikowane i tworzone
-                przez użytkownika jak i te, przetwarzane przez aplikacje
-                pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
-                optymalne wykorzystanie zasobów systemowych i dostosowanie
-                obciążenia do potrzeb użytkownika.
-              </h2>
+              <div class="back">
+                <div class="inner">
+                  <p>
+                    W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
+                    systemie pliki, zarówno te otwierane, modyfikowane i tworzone
+                    przez użytkownika jak i te, przetwarzane przez aplikacje
+                    pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
+                    optymalne wykorzystanie zasobów systemowych i dostosowanie
+                    obciążenia do potrzeb użytkownika.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <!-- Card 9 -->
-        <div class="card w-[274px] h-[600px]">
-          <div class="card-inner">
-            <div
-              class="card-front flex items-center justify-start rounded-lg px-10"
-            >
-              <div class="flex justify-start flex-col">
-                <img class="w-[70px]" src="images/file_lock.svg" alt="" />
-                <h2 class="text-xl font-semibold">Ochrona Plikow</h2>
+        <div class="cols ">
+          <div class="col ">
+            <div class="container">
+              <div class="front">
+                <div class="inner">
+                  <img
+                    src="images/file_lock.svg"
+                    alt=""
+                  />
+                  <p >Web design</p>
+                </div>
               </div>
-            </div>
-            <div class="card-back flex items-center justify-center rounded-lg">
-              <h2 class="text-sm text-white px-10">
-                W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
-                systemie pliki, zarówno te otwierane, modyfikowane i tworzone
-                przez użytkownika jak i te, przetwarzane przez aplikacje
-                pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
-                optymalne wykorzystanie zasobów systemowych i dostosowanie
-                obciążenia do potrzeb użytkownika.
-              </h2>
+              <div class="back">
+                <div class="inner">
+                  <p>
+                    W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
+                    systemie pliki, zarówno te otwierane, modyfikowane i tworzone
+                    przez użytkownika jak i te, przetwarzane przez aplikacje
+                    pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
+                    optymalne wykorzystanie zasobów systemowych i dostosowanie
+                    obciążenia do potrzeb użytkownika.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <!-- Card 10 -->
-        <div class="card w-[274px] h-[600px]">
-          <div class="card-inner">
-            <div
-              class="card-front flex items-center justify-start rounded-lg px-10"
-            >
-              <div class="flex justify-start flex-col">
-                <img class="w-[70px]" src="images/file_lock.svg" alt="" />
-                <h2 class="text-xl font-semibold">Ochrona Plikow</h2>
+        <div class="cols ">
+          <div class="col ">
+            <div class="container">
+              <div class="front">
+                <div class="inner">
+                  <img
+                    src="images/file_lock.svg"
+                    alt=""
+                  />
+                  <p >Web design</p>
+                </div>
               </div>
-            </div>
-            <div class="card-back flex items-center justify-center rounded-lg">
-              <h2 class="text-sm text-white px-10">
-                W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
-                systemie pliki, zarówno te otwierane, modyfikowane i tworzone
-                przez użytkownika jak i te, przetwarzane przez aplikacje
-                pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
-                optymalne wykorzystanie zasobów systemowych i dostosowanie
-                obciążenia do potrzeb użytkownika.
-              </h2>
+              <div class="back">
+                <div class="inner">
+                  <p>
+                    W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
+                    systemie pliki, zarówno te otwierane, modyfikowane i tworzone
+                    przez użytkownika jak i te, przetwarzane przez aplikacje
+                    pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
+                    optymalne wykorzystanie zasobów systemowych i dostosowanie
+                    obciążenia do potrzeb użytkownika.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <!-- Card 11 -->
-        <div class="card w-[274px] h-[600px]">
-          <div class="card-inner">
-            <div
-              class="card-front flex items-center justify-start rounded-lg px-10"
-            >
-              <div class="flex justify-start flex-col">
-                <img class="w-[70px]" src="images/file_lock.svg" alt="" />
-                <h2 class="text-xl font-semibold">Ochrona Plikow</h2>
+        <div class="cols ">
+          <div class="col ">
+            <div class="container">
+              <div class="front">
+                <div class="inner">
+                  <img
+                    src="images/file_lock.svg"
+                    alt=""
+                  />
+                  <p >Web design</p>
+                </div>
               </div>
-            </div>
-            <div class="card-back flex items-center justify-center rounded-lg">
-              <h2 class="text-sm text-white px-10">
-                W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
-                systemie pliki, zarówno te otwierane, modyfikowane i tworzone
-                przez użytkownika jak i te, przetwarzane przez aplikacje
-                pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
-                optymalne wykorzystanie zasobów systemowych i dostosowanie
-                obciążenia do potrzeb użytkownika.
-              </h2>
+              <div class="back">
+                <div class="inner">
+                  <p>
+                    W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
+                    systemie pliki, zarówno te otwierane, modyfikowane i tworzone
+                    przez użytkownika jak i te, przetwarzane przez aplikacje
+                    pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
+                    optymalne wykorzystanie zasobów systemowych i dostosowanie
+                    obciążenia do potrzeb użytkownika.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <!-- Card 12 -->
-        <div class="card w-[274px] h-[600px]">
-          <div class="card-inner">
-            <div
-              class="card-front flex items-center justify-start rounded-lg px-10"
-            >
-              <div class="flex justify-start flex-col">
-                <img class="w-[70px]" src="images/file_lock.svg" alt="" />
-                <h2 class="text-xl font-semibold">Ochrona Plikow</h2>
+        <div class="cols ">
+          <div class="col ">
+            <div class="container">
+              <div class="front">
+                <div class="inner">
+                  <img
+                    src="images/file_lock.svg"
+                    alt=""
+                  />
+                  <p >Web design</p>
+                </div>
               </div>
-            </div>
-            <div class="card-back flex items-center justify-center rounded-lg">
-              <h2 class="text-sm text-white px-10">
-                W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
-                systemie pliki, zarówno te otwierane, modyfikowane i tworzone
-                przez użytkownika jak i te, przetwarzane przez aplikacje
-                pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
-                optymalne wykorzystanie zasobów systemowych i dostosowanie
-                obciążenia do potrzeb użytkownika.
-              </h2>
+              <div class="back">
+                <div class="inner">
+                  <p>
+                    W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
+                    systemie pliki, zarówno te otwierane, modyfikowane i tworzone
+                    przez użytkownika jak i te, przetwarzane przez aplikacje
+                    pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
+                    optymalne wykorzystanie zasobów systemowych i dostosowanie
+                    obciążenia do potrzeb użytkownika.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-    </section>
+      </section>
     <!-- Security Section -->
-    <section class="py-10 px-10 bg-red-900 ">
-      <h1>Narzędzia do zarządzania bezpieczeństwem
-      </h1>
-      <div class="grid-container grid grid-cols-12 gap-2">
-        <div class="grid-item col-span-4 h-[300px]  w-[300px]">
-          <div class="flip-card group">
-            <div class="flip-card-inner">
-              <div class="flip-card-front flex items-center justify-center bg-blue-400 text-white h-full rounded-lg">
-                Front Content 1
-              </div>
-              <div class="flip-card-back flex items-center justify-center bg-red-400 text-white h-full rounded-lg">
-                Back Content 1
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="grid-item col-span-4">
-          <div class="flip-card group">
-            <div class="flip-card-inner">
-              <div class="flip-card-front flex items-center justify-center bg-blue-400 text-white h-full rounded-lg">
-                Front Content 2
-              </div>
-              <div class="flip-card-back flex items-center justify-center bg-red-400 text-white h-full rounded-lg">
-                Back Content 2
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="grid-item col-span-4">
-          <div class="flip-card group">
-            <div class="flip-card-inner">
-              <div class="flip-card-front flex items-center justify-center bg-blue-400 text-white h-full rounded-lg">
-                Front Content 3
-              </div>
-              <div class="flip-card-back flex items-center justify-center bg-red-400 text-white h-full rounded-lg">
-                Back Content 3
+
+    <section class="pb-10 pt-6 px-10">
+      <h2 class="text-4xl text-center mb-16">Narzędzia do zarządzania bezpieczeństwem
+      </h2>
+      <div class="grid grid-cols-12 gap-4">
+        <!-- Card 1 -->
+        <div class="col-span-4 row-span-1">
+          <div class="cols ">
+            <div class="col ">
+              <div class="container">
+                <div class="front">
+                  <div class="inner">
+                    <img
+                      src="images/file_lock.svg"
+                      alt=""
+                    />
+                    <p >Web design</p>
+                  </div>
+                </div>
+                <div class="back">
+                  <div class="inner">
+                    <p>
+                      W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
+                      systemie pliki, zarówno te otwierane, modyfikowane i tworzone
+                      przez użytkownika jak i te, przetwarzane przez aplikacje
+                      pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
+                      optymalne wykorzystanie zasobów systemowych i dostosowanie
+                      obciążenia do potrzeb użytkownika.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="grid-item col-span-4">
-          <div class="flip-card group">
-            <div class="flip-card-inner">
-              <div class="flip-card-front flex items-center justify-center bg-blue-400 text-white h-full rounded-lg">
-                Front Content 4
-              </div>
-              <div class="flip-card-back flex items-center justify-center bg-red-400 text-white h-full rounded-lg">
-                Back Content 4
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="grid-item col-span-4">
-          <div class="flip-card group">
-            <div class="flip-card-inner">
-              <div class="flip-card-front flex items-center justify-center bg-blue-400 text-white h-full rounded-lg">
-                Front Content 5
-              </div>
-              <div class="flip-card-back flex items-center justify-center bg-red-400 text-white h-full rounded-lg">
-                Back Content 5
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="grid-item col-span-4">
-          <div class="flip-card group">
-            <div class="flip-card-inner">
-              <div class="flip-card-front flex items-center justify-center bg-blue-400 text-white h-full rounded-lg">
-                Front Content 6
-              </div>
-              <div class="flip-card-back flex items-center justify-center bg-red-400 text-white h-full rounded-lg">
-                Back Content 6
+        <!-- Card 2 -->
+        <div class="col-span-4 row-span-1">
+          <div class="cols ">
+            <div class="col ">
+              <div class="container">
+                <div class="front">
+                  <div class="inner">
+                    <img
+                      src="images/file_lock.svg"
+                      alt=""
+                    />
+                    <p >Web design</p>
+                  </div>
+                </div>
+                <div class="back">
+                  <div class="inner">
+                    <p>
+                      W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
+                      systemie pliki, zarówno te otwierane, modyfikowane i tworzone
+                      przez użytkownika jak i te, przetwarzane przez aplikacje
+                      pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
+                      optymalne wykorzystanie zasobów systemowych i dostosowanie
+                      obciążenia do potrzeb użytkownika.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="grid-item col-span-4">
-          <div class="flip-card group">
-            <div class="flip-card-inner">
-              <div class="flip-card-front flex items-center justify-center bg-blue-400 text-white h-full rounded-lg">
-                Front Content 7
-              </div>
-              <div class="flip-card-back flex items-center justify-center bg-red-400 text-white h-full rounded-lg">
-                Back Content 7
+        <!-- Card 3 -->
+        <div class="col-span-4 row-span-1">
+          <div class="cols ">
+            <div class="col ">
+              <div class="container">
+                <div class="front">
+                  <div class="inner">
+                    <img
+                      src="images/file_lock.svg"
+                      alt=""
+                    />
+                    <p >Web design</p>
+                  </div>
+                </div>
+                <div class="back">
+                  <div class="inner">
+                    <p>
+                      W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
+                      systemie pliki, zarówno te otwierane, modyfikowane i tworzone
+                      przez użytkownika jak i te, przetwarzane przez aplikacje
+                      pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
+                      optymalne wykorzystanie zasobów systemowych i dostosowanie
+                      obciążenia do potrzeb użytkownika.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-span-3 row-span-2">
+          <div class="cols ">
+            <div class="col ">
+              <div class="container">
+                <div class="front">
+                  <div class="inner">
+                    <img
+                      src="images/file_lock.svg"
+                      alt=""
+                    />
+                    <p >Web design</p>
+                  </div>
+                </div>
+                <div class="back">
+                  <div class="inner">
+                    <p>
+                      W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
+                      systemie pliki, zarówno te otwierane, modyfikowane i tworzone
+                      przez użytkownika jak i te, przetwarzane przez aplikacje
+                      pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
+                      optymalne wykorzystanie zasobów systemowych i dostosowanie
+                      obciążenia do potrzeb użytkownika.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="col-span-3 row-span-2">
+          <div class="cols ">
+            <div class="col ">
+              <div class="container">
+                <div class="front">
+                  <div class="inner">
+                    <img
+                      src="images/file_lock.svg"
+                      alt=""
+                    />
+                    <p >Web design</p>
+                  </div>
+                </div>
+                <div class="back">
+                  <div class="inner">
+                    <p>
+                      W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
+                      systemie pliki, zarówno te otwierane, modyfikowane i tworzone
+                      przez użytkownika jak i te, przetwarzane przez aplikacje
+                      pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
+                      optymalne wykorzystanie zasobów systemowych i dostosowanie
+                      obciążenia do potrzeb użytkownika.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="col-span-3 row-span-2">
+          <div class="cols ">
+            <div class="col ">
+              <div class="container">
+                <div class="front">
+                  <div class="inner">
+                    <img
+                      src="images/file_lock.svg"
+                      alt=""
+                    />
+                    <p >Web design</p>
+                  </div>
+                </div>
+                <div class="back">
+                  <div class="inner">
+                    <p>
+                      W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
+                      systemie pliki, zarówno te otwierane, modyfikowane i tworzone
+                      przez użytkownika jak i te, przetwarzane przez aplikacje
+                      pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
+                      optymalne wykorzystanie zasobów systemowych i dostosowanie
+                      obciążenia do potrzeb użytkownika.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 7 -->
+        <div class="col-span-3 row-span-2">
+          <div class="cols ">
+            <div class="col ">
+              <div class="container">
+                <div class="front">
+                  <div class="inner">
+                    <img
+                      src="images/file_lock.svg"
+                      alt=""
+                    />
+                    <p >Web design</p>
+                  </div>
+                </div>
+                <div class="back">
+                  <div class="inner">
+                    <p>
+                      W czasie rzeczywistym kontroluje wszystkie wykorzystywane w
+                      systemie pliki, zarówno te otwierane, modyfikowane i tworzone
+                      przez użytkownika jak i te, przetwarzane przez aplikacje
+                      pracujące w tle. Inteligentne mechanizmy skanujące gwarantują
+                      optymalne wykorzystanie zasobów systemowych i dostosowanie
+                      obciążenia do potrzeb użytkownika.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+    
+    <!-- section buying -->
+    <section class="relative bg-[url('/images/biznes.jpg')] w-full h-[600px] bg-cover bg-center">
+      <!-- Red overlay with 80% opacity -->
+      <div class="absolute inset-0 bg-red-600 bg-opacity-80"></div>
+    
+      <!-- Content with no opacity -->
+      <div class="relative z-10 px-28 py-[230px] ">
+        <h2 class="text-white text-5xl font-bold px-">Arcabit Internet Security</h2>
+        <p class="text-white mt-4 text-xl font-semibold">Ochrona przed wirusami i zagrożeniami z sieci
+        </p>
+        
+        <div class="inline-flex items-center bg-black bg-opacity-100 rounded-full pl-5 pr-2 py-2 justify-between mt-6 cursor-pointer">
+          <p class="text-red-600 font-semibold ">
+            Kupuje
+          </p>
+          <div class="bg-[#383838] rounded-full flex items-center justify-center w-[35px] h-[35px] ml-2">
+            <img src="images/right_arrow_red.svg" class="w-[20px] h-[20px] z-10" />
           </div>
         </div>
       </div>
     </section>
+    
+    
+    <footer class="px-20 bg-black text-white">
+      <section class="w-full py-10">
+        <div class="grid grid-cols-4 gap-8 px-10 py-10">
+          <!-- Column 1 - PRODUKTY -->
+          <div>
+            <h2 class="text-lg font-bold mb-4 text-[#777777]">PRODUKTY</h2>
+            <ul class="space-y-2 text-[#cccccc] font-semibold capitalize flex flex-col items-start">
+              <li class="hover:underline-effect">Home Security</li>
+              <li class="hover:underline-effect">Internet Security</li>
+              <li class="hover:underline-effect">Endpoint Security</li>
+              <li class="hover:underline-effect">Bezpieczna Szkoła</li>
+              <li class="hover:underline-effect">Ochrona Serwera</li>
+              <li class="hover:underline-effect">Wersje OEM</li>
+              <li class="hover:underline-effect">Android Antivirus</li>
+            </ul>
+          </div>
+      
+          <!-- Column 2 - MENU -->
+          <div>
+            <h2 class="text-lg font-bold mb-4 text-[#777777]">MENU</h2>
+            <ul class="space-y-2 text-[#cccccc] font-semibold capitalize flex flex-col items-start">
+              <li class="hover:underline-effect">Wsparcie</li>
+              <li class="hover:underline-effect">Kontakt</li>
+              <li class="hover:underline-effect">Kariera</li>
+              <li class="hover:underline-effect">Blog</li>
+              <li class="hover:underline-effect">Partnerzy</li>
+              <li class="hover:underline-effect">Porównanie produktów</li>
+              <li class="hover:underline-effect">Polityka prywatności</li>
+            </ul>
+          </div>
+      
+          <!-- Column 3 - KONTAKT -->
+          <div>
+            <h2 class="text-lg font-bold mb-4 text-[#777777]">KONTAKT</h2>
+            <p class="mb-2 text-[#cccccc] text-sm">Arcabit Sp. z o.o.<br>
+              05-082 Blizne Łaszczyńskiego,<br>
+              ul. Graniczna 50 (Warszawa/Bemowo)
+            </p>
+            <p class="mb-2 text-[#cccccc] text-sm">tel. (22) 532 69 00</p>
+            <p>fax (22) 201 21 82</p>
+          </div>
+      
+          <!-- Column 4 - Image -->
+          <div class="flex items-start justify-end">
+            <img src="/images/logo_footer.png" alt="Company Image" class="w-[150px] h-auto rounded-lg shadow-lg ">
+          </div>
+        </div>
+      </section>
+      
+      
+    </footer>
+    
+    
+    
     <script src="script.js"></script>
   </body>
 </html>
