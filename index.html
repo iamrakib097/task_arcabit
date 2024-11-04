@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Your Title</title>
+    <title>Internet security</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -20,18 +20,19 @@
   </head>
   <body>
     <section id="navbar-section" class="max-w-[1349px] bg-[#151515] h-[102px] flex items-center transition-colors duration-300">
-      <nav class="max-w-full h-[102px] flex justify-between items-center px-[90px] py-2 flex-1 font-montserrat text-white">
+      <nav class="max-w-full h-[102px] flex justify-between items-center px-[60px] py-2 flex-1 font-montserrat text-white">
         <img class="w-[227px]" src="/images/logoflat_whiteC.png" alt="Logo" />
         <img class="w-[40px] h-[30px] lg:hidden" src="/images/hamburger.svg" alt="Menu" />
     
-        <ul class="lg:flex text-sm gap-6 items-center hidden ">
+        <ul class="lg:flex text-sm gap-4 items-center hidden ">
           <li class="flex items-center border-white border-2 rounded-full px-2 relative group">
             <p class="text-md px-3 py-1 font-semibold text-white">Produkty</p>
             <img src="images/down_arrow.svg" alt="Down arrow" width="10" height="10" class="ml-2" />
-    
-            <div class="absolute hidden group-hover:block bg-white text-black left-0 top-full py-6 rounded-md shadow-md w-[300px]">
-              <ul class="p-2 text-[16px] font-semibold">
-                <li class="py-1 px-4 dropdown-text hover:text-red-500">Arcabit Home Security</li>
+            
+            <div class="absolute hidden group-hover:block bg-transparent text-black left-0 top-[5px] py-14   w-[300px]">
+                <div class=" bg-white px-2 py-6">
+                <ul class="p-2 text-[16px] font-semibold">
+                  <li class="py-1 px-4 dropdown-text hover:text-red-500">Arcabit Home Security</li>
                 <li class="py-1 px-4 dropdown-text hover:text-red-500">Arcabit Internet Security</li>
                 <li class="py-1 px-4 dropdown-text hover:text-red-500">Arcabit Endpoint Security</li>
                 <li class="py-1 px-4 dropdown-text hover:text-red-500">Arcabit Small Office Security</li>
@@ -44,6 +45,7 @@
                 <li class="py-1 px-4 dropdown-text hover:text-red-500">Porównanie produktów</li>
               </ul>
             </div>
+          </div>
           </li>
     
           <li class="hover:underline-effect text-[#8a8a8a] font-bold text-[#16px]">Do pobrania</li>
@@ -56,7 +58,8 @@
             <p class="text-[#8a8a8a] font-bold text-[#16px]">Kontakt</p>
             <img src="images/down_arrow.svg" alt="Down arrow" width="14" height="10" class="ml-2" />
             
-            <div class="absolute hidden group-hover:block bg-white text-black -left-40 top-full py-6  rounded-md shadow-md w-[280px]">
+            <div class="absolute hidden group-hover:block bg-transparent text-black -left-40 top-[5px] py-14   w-[300px]">
+              <div class=" bg-white px-2 py-6">
               <ul class="p-2 text-[16px] font-semibold">
                 <li class="py-1 px-4 dropdown-text hover:text-red-500 cursor-pointer">Wszystkie kontakty</li>
                 <li class="py-1 px-4 dropdown-text hover:text-red-500 cursor-pointer">Wsparcie i poradniki</li>
@@ -65,8 +68,9 @@
                 <li class="py-1 px-4 dropdown-text hover:text-red-500 cursor-pointer">O firmie</li>
                 <li class="py-1 px-4 dropdown-text hover:text-red-500 cursor-pointer">Blog</li>
                 <li class="py-1 px-4 dropdown-text hover:text-red-500 cursor-pointer">Formularz kontaktowy</li>
-              </ul>
-            </div>
+            </ul>
+          </div>
+        </div>
           </li>
           
     
@@ -89,7 +93,7 @@
           />
         </div>
         <div class="flex-1 text-white flex-col flex">
-          <h1 class="text-[40px] font-semibold leading-[50px] mb-6">
+          <h1 class="text-[30px] font-semibold leading-[50px] mb-6">
             Arcabit Internet Security
           </h1>
           <p class="text-[#939393] text-[19px] leading-[29px] mb-6">
@@ -97,11 +101,33 @@
           </p>
           <div class="flex justify-start mb-6">
             <div
-              class="inline-flex items-center bg-gradient-to-r from-[#940d11] to-[#e31e24] hover:from-[#e31e24] hover:to-[#e31e24] rounded-full pl-8 gap-4 pr-2 py-2 object-contain w-auto"
+              class="relative inline-flex items-center bg-gradient-to-r from-[#940d11] to-[#e31e24] group rounded-full pl-8 gap-4 pr-2 py-2 object-contain w-auto"
             >
+            <div class="h-full w-full absolute rounded-full bg-[#e31e24] left-0 opacity-0 group-hover:opacity-100 transition duration-500 z-10"></div>
+              <div class="flex z-20 items-center">
+                <p class="text-white font-semibold">
+                  Specyfikacja pakietów Arcabit
+                </p>
+                <div
+                  class="bg-black bg-opacity-20 rounded-full flex items-center justify-center w-[30px] h-[30px] ml-2"
+                >
+                  <img
+                    src="images/right_arrow.svg"
+                    class="w-[20px] h-[20px] z-10"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="flex justify-start mb-6">
+            <div
+            class="relative inline-flex items-center bg-gradient-to-r from-[#940d11] to-[#e31e24] group rounded-full pl-8 gap-4 pr-2 py-2 object-contain w-auto"
+          >
+          <div class="h-full w-full absolute rounded-full bg-[#e31e24] left-0 opacity-0 group-hover:opacity-100 transition duration-500 z-10"></div>
+            <div class="flex z-20 items-center">
               <p class="text-white font-semibold">
-                Specyfikacja pakietów Arcabit
-              </p>
+                Kupuję tę wersję              </p>
               <div
                 class="bg-black bg-opacity-20 rounded-full flex items-center justify-center w-[30px] h-[30px] ml-2"
               >
@@ -112,23 +138,6 @@
               </div>
             </div>
           </div>
-          
-          <div class="flex justify-start mb-6">
-            <div
-              class="inline-flex items-center bg-gradient-to-r from-[#940d11] to-[#e31e24] hover:from-[#e31e24] hover:to-[#e31e24] rounded-full pl-8 gap-4 pr-2 py-2 object-contain w-auto"
-            >
-              <p class="text-white font-semibold">
-                Kupuję tę wersję
-              </p>
-              <div
-                class="bg-black bg-opacity-20 rounded-full flex items-center justify-center w-[30px] h-[30px] ml-2"
-              >
-                <img
-                  src="images/right_arrow.svg"
-                  class="w-[20px] h-[20px] z-10"
-                />
-              </div>
-            </div>
           </div>
           
           <p class="text-sm text-[#5b5b5b]">30 dniowa wersja trial</p>
@@ -783,11 +792,8 @@
     
     <!-- section buying -->
     <section class="relative bg-[url('/images/biznes.jpg')] w-full h-[600px] bg-cover bg-center">
-      <!-- Red overlay with 80% opacity -->
       <div class="absolute inset-0 bg-red-600 bg-opacity-80"></div>
-    
-      <!-- Content with no opacity -->
-      <div class="relative z-10 px-28 py-[230px] ">
+          <div class="relative z-10 px-28 py-[230px] ">
         <h2 class="text-white text-5xl font-bold px-">Arcabit Internet Security</h2>
         <p class="text-white mt-4 text-xl font-semibold">Ochrona przed wirusami i zagrożeniami z sieci
         </p>
@@ -810,28 +816,28 @@
           <!-- Column 1 - PRODUKTY -->
           <div>
             <h2 class="text-lg font-bold mb-4 text-[#777777]">PRODUKTY</h2>
-            <ul class="space-y-2 text-[#cccccc] font-semibold capitalize flex flex-col items-start">
-              <li class="hover:underline-effect">Home Security</li>
-              <li class="hover:underline-effect">Internet Security</li>
-              <li class="hover:underline-effect">Endpoint Security</li>
-              <li class="hover:underline-effect">Bezpieczna Szkoła</li>
-              <li class="hover:underline-effect">Ochrona Serwera</li>
-              <li class="hover:underline-effect">Wersje OEM</li>
-              <li class="hover:underline-effect">Android Antivirus</li>
+            <ul class="space-y-2 text-[#cccccc] font-semibold uppercase flex flex-col items-start text-[13px]">
+              <li class="hover:underline-">Home Security</li>
+              <li class="hover:underline-">Internet Security</li>
+              <li class="hover:underline-">Endpoint Security</li>
+              <li class="hover:underline-">Bezpieczna Szkoła</li>
+              <li class="hover:underline-">Ochrona Serwera</li>
+              <li class="hover:underline-">Wersje OEM</li>
+              <li class="hover:underline-">Android Antivirus</li>
             </ul>
           </div>
       
           <!-- Column 2 - MENU -->
           <div>
             <h2 class="text-lg font-bold mb-4 text-[#777777]">MENU</h2>
-            <ul class="space-y-2 text-[#cccccc] font-semibold capitalize flex flex-col items-start">
-              <li class="hover:underline-effect">Wsparcie</li>
-              <li class="hover:underline-effect">Kontakt</li>
-              <li class="hover:underline-effect">Kariera</li>
-              <li class="hover:underline-effect">Blog</li>
-              <li class="hover:underline-effect">Partnerzy</li>
-              <li class="hover:underline-effect">Porównanie produktów</li>
-              <li class="hover:underline-effect">Polityka prywatności</li>
+            <ul class="space-y-2 text-[#cccccc] font-semibold uppercase flex flex-col items-start text-[13px]">
+              <li class="hover:underline-">Wsparcie</li>
+              <li class="hover:underline-">Kontakt</li>
+              <li class="hover:underline-">Kariera</li>
+              <li class="hover:underline-">Blog</li>
+              <li class="hover:underline-">Partnerzy</li>
+              <li class="hover:underline-">Porównanie produktów</li>
+              <li class="hover:underline-">Polityka prywatności</li>
             </ul>
           </div>
       
