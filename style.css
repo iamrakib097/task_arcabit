@@ -204,5 +204,18 @@
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     }
+    .dropdown-text {
+        color: #8b8b8b; /* Default text color for dropdown items */
+        transition: color 0.3s ease; /* Smooth transition for color change */
+        
+      }
+      
+      .dropdown-text:hover {
+        color: red; /* Change color on hover */
+      }
+
+      ul li {
+        cursor: pointer; /* Make sure all li elements show the pointer cursor */
+      }
 
 }
